@@ -4,6 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { SetUp } from "./setUp";
 import { HeroSection } from "./heroSection";
+import {  LotStats } from "./lotStats";
 import { LotInfo } from "./lotInfo";
 
 
@@ -45,9 +46,10 @@ export const OwnerDashboard = () => {
         return <SetUp/>
     }
 
-    return <div className="bg-gray-100 h-[500px]">
+    return <div className="bg-surface pb-20">
         <HeroSection name={lot.name} address={lot.address}/>
         {/* use the lot info card and send the four props */}
-        <LotInfo />
+        <LotStats />
+        <LotInfo name={lot.name} address={lot.address} pricePerHour={lot.pricePerHour} createdAt={lot.createdAt} latitude={lot.latitude} longitude={lot.longitude}/>
     </div>
 }

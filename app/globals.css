@@ -48,6 +48,9 @@
 
   --color-primary: #005e53;
   --color-primary-container: #00796b;
+  --color-tertiary: #843f29;
+  --color-surface: #f8faf8;
+  --color-surface-container-low: #f2f4f5;
 }
 
 :root {

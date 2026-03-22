@@ -39,46 +39,48 @@ export const Navbar = () => {
                 <Link href={"/"} className="bg-gradient-to-br from-primary to-teal-700 bg-clip-text font-bold text-2xl text-transparent">SmartPark</Link>
                 </div>
 
-                <div className="hidden md:flex gap-8 items-center ">
-                    {[
+                <div className="hidden md:flex justify gap-8 items-center ">
+                    <div className="flex gap-8">
+                        {[
                         {name: "Features", path:"/features"},
                         {name: "How it works", path:"/howItWorks"},
                         {name: "Pricing", path: "/pricing"},
-                        // {name: "Dashboard", path: role === "USER" ? "/dashboard" : "/owner/dashboard"}
-
-                    ].map((item) => (
-                        <Link key={item.path} href={item.path}>
-                            <div className={cn(
-                                "transition-all duration-200 text-stone-600 hover:text-primary",
-                                pathname == item.path ? "border-b border-primary" : "text-stone-600")}
-                            >
-                                {item.name}
-                            </div>
-                        </Link>
-                    ))}
-
-                    <div className="grid">
-                        <SignedOut >
-                            <SignInButton mode="redirect" forceRedirectUrl="/post-login">
-                                <button className="border px-5 py-3 rounded-lg border-stone-400 cursor-pointer hover:border-emerald-400 hover:bg-emerald-50 transition-all duration-200 ease-in-out font-semibold text-stone-600">
-                                    Log In
-                                </button>
-                            </SignInButton>
-                        </SignedOut>
-                        <SignedIn >
-                            <div className="flex gap-8 items-center">
-                                <Link href={role === "USER" ? "/dashboard" : "/owner/dashboard"}>
-                                    {!loading && <div className={cn(
-                                    "transition-all duration-200 text-stone-600 hover:primary",
-                                    pathname.includes("dashboard") ? "border-b-2 border-primary" : ""
-                                    )}>
-                                        Dashboard
-                                    </div>}
-                                    </Link>
-                                <UserButton/>
-                            </div>
+                        ].map((item) => (
+                            <Link key={item.path} href={item.path}>
+                                <div className={cn(
+                                    "transition-all duration-200 text-stone-600 hover:text-primary font-medium",
+                                    pathname == item.path ? "border-b-3 border-primary" : "text-stone-600")}
+                                >
+                                    {item.name}
+                                </div>
+                            </Link>
+                        ))}
+                        <SignedIn>
+                            <Link href={role === "USER" ? "/dashboard" : "/owner/dashboard"}>
+                                {!loading && <div className={cn(
+                                "transition-all duration-200 text-stone-600 hover:primary font-medium hover:text-primary",
+                                pathname.includes("dashboard") ? "border-b-3 border-primary" : ""
+                                )}>
+                                    Dashboard
+                                </div>}
+                            </Link>
                         </SignedIn>
                     </div>
+                </div>
+                <div className="grid">
+                    <SignedOut >
+                        <SignInButton mode="redirect" forceRedirectUrl="/post-login">
+                            <button className="border px-5 py-3 rounded-lg border-stone-400 cursor-pointer hover:border-emerald-400 hover:bg-emerald-50 transition-all duration-200 ease-in-out font-semibold text-stone-600">
+                                Log In
+                            </button>
+                        </SignInButton>
+                    </SignedOut>
+                    <SignedIn >
+                        <div className="flex gap-8 items-center">
+                            
+                            <UserButton/>
+                        </div>
+                    </SignedIn>
                 </div>
             </div>
     </div>

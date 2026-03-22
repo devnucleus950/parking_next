@@ -3,7 +3,7 @@ import { ChevronRight, Sparkles } from "lucide-react"
 export const HeroSection = () => {
 
     // subject-b
-    return <div className="relative bg-gradient-to-b from-stone-100 via-emerald-200/20 to-stone-100 flex ">
+    return <div className="relative bg-gradient-to-b from-stone-100 via-primary/10 to-stone-100 flex ">
         
 
        {/* subject-a  */}
@@ -14,13 +14,13 @@ export const HeroSection = () => {
 
             {/* child-1 */}
             <div className="space-y-8">
-                <div className="inline-flex border rounded-full items-center bg-emerald-50 text-emerald-700 px-3.5 py-2 space-x-2">
+                <div className="inline-flex border rounded-full items-center bg-emerald-50 text-primary px-3.5 py-2 space-x-2">
                     <Sparkles className="w-3.5 h-3.5"/>
                     <p>Intelligent IoT Integration</p>
                 </div>
 
                 <div className="space-y-6">
-                    <h1 className="text-6xl md:text-7xl font-bold text-stone-900   ">Smart Parking,<br/><span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">seamlessly </span>
+                    <h1 className="text-6xl md:text-7xl font-bold text-stone-900   ">Smart Parking,<br/><span className="bg-gradient-to-r from-primary to-teal-600 bg-clip-text text-transparent">seamlessly </span>
                     intelligent</h1>
                 
 
