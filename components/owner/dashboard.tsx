@@ -6,6 +6,8 @@ import { SetUp } from "./setUp";
 import { HeroSection } from "./heroSection";
 import {  LotStats } from "./lotStats";
 import { LotInfo } from "./lotInfo";
+import { LiveSessions } from "./liveSessoins";
+import { Subscribers } from "./subscribers";
 
 
 export const OwnerDashboard = () => {
@@ -51,5 +53,7 @@ export const OwnerDashboard = () => {
         {/* use the lot info card and send the four props */}
         <LotStats />
         <LotInfo name={lot.name} address={lot.address} pricePerHour={lot.pricePerHour} createdAt={lot.createdAt} latitude={lot.latitude} longitude={lot.longitude}/>
+        <LiveSessions pricePerHour={lot.pricePerHour}/>
+        <Subscribers/>
     </div>
 }

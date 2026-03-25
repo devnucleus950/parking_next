@@ -45,7 +45,7 @@ export const HeroSection = ({lots} : {lots: Lot[]}) => {
                             </div>
                         </div>
                         <div className="rounded-2xl overflow-hidden shadow-xl">
-                            {/* <LotsMap lots={lots}/> */}
+                            <LotsMap lots={lots}/>
                         </div>
                     </div>
                 </div>

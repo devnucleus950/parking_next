@@ -52,7 +52,7 @@ export const LotInfo = ({pricePerHour,createdAt,longitude,latitude,name,address}
             </div>
 
             <div className="md:flex-1 rounded-xl overflow-hidden relative">
-                {/* <SinglePinMap latitude={latitude} longitude={longitude} name={name} address={address}/> */}
+                <SinglePinMap latitude={latitude} longitude={longitude} name={name} address={address}/>
                 <div>
                     <div className="flex gap-3 items-center absolute z-1000 top-4 right-4 bg-white px-5 py-4 rounded-lg">
                         <p className="rounded-full bg-primary text-white px-3 py-1 font-extrabold text-3xl">P</p>

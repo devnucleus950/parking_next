@@ -1,3 +1,4 @@
+import axios from "axios"
 import { FilePenLine, MapPin } from "lucide-react"
 
 interface heroProps {
@@ -15,7 +16,9 @@ export const HeroSection = ({name,address}:heroProps) => {
                 <span className="text-sm font-medium ">{address}</span>
             </p>
         </div>
-        <button className="flex items-center gap-2 text-white bg-primary px-4 py-3 rounded-xl font-semibold cursor-pointer hover:bg-primary-container shadow-lg shadow-primary/20">
+        <button onClick={async () => {
+            await axios.get("/api/owner/activeSessions")
+        }} className="flex items-center gap-2 text-white bg-primary px-4 py-3 rounded-xl font-semibold cursor-pointer hover:bg-primary-container shadow-lg shadow-primary/20">
             <FilePenLine/>
             <span>Edit Lot</span>
         </button>

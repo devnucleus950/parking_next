@@ -20,7 +20,8 @@ export async function POST(req: Request) {
                 }
             },
             update: {
-                isActive: true
+                isActive: true,
+                subscribedAt: new Date()
             },
             create:{
                 userId: account.id,

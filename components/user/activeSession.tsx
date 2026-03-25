@@ -101,7 +101,7 @@ export const ActiveSession = () => {
                 </div>
 
                 {loading ? <div className="shadow-md flex items-center justify-center text-xl font-semibold p-20 animate-pulse">Loading...</div> : active ? (<div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl border-2">
-                    <div className="flex justify-between bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 text-white p-6 items-center ">
+                    <div className="flex justify-between bg-gradient-to-br from-primary via-teal-500 to-cyan-600 text-white p-6 items-center ">
                         <div className="space-y-2 ">
                             <h1 className="font-bold text-2xl">{lotData.name}</h1>
                             <p className="flex gap-1 font-semibold items-center">
@@ -121,7 +121,7 @@ export const ActiveSession = () => {
                                 <p className={cn("font-semibold text-xl",(param.name) == "Current Fare" && "text-emerald-600 font-bold")}>{param.value}</p>
                             </div>
                         ))}
-                            <button disabled={exiting} onClick={exitHandler} className="bg-red-500 px-8 text-white font-semibold text-lg rounded-sm cursor-pointer hover:scale-103 transition-all duration-300 ease-in-out">{exiting ? "Exiting..." : "Exit"}</button>
+                            <button disabled={exiting} onClick={exitHandler} className="bg-rose-500 px-8 text-white font-semibold text-lg rounded-sm cursor-pointer hover:scale-103 transition-all duration-300 ease-in-out">{exiting ? "Exiting..." : "Exit"}</button>
                     </div>
                 </div>) : <div className="shadow-md flex items-center justify-center text-xl font-semibold p-20">No active sessions</div>}
             </div>
